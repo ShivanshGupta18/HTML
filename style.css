@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(background.jpg) no-repeat center;
+    background-size: cover;
+    color: #fff;
+    font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+}
+.header{
+    background: url(coronavirus-2.jpeg) no-repeat center;
+    height: 500px;
+    background-size: cover;
+    padding:20px;
+}
+.header .content h1{
+    color: white;
+    text-align: center;
+}
+.header .content{
+    position: relative;
+    top: 50%;
+    text-align: center;
+}
+.navigation{
+    margin: 2px 2px;
+   
+}
+.navigation ul{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+}
+.navigation li{
+    list-style-type:none;
+    padding: 7px;
+    letter-spacing: 1px;
+}
+.navigation li a{
+    font-family:'Times New Roman', Times, serif;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size:20px;
+}
+.navigation li a:hover{
+    color: blue;
+}
+.flex1{
+    display: flex;
+    background:linear-gradient(to right,purple,blue);
+    color:white;
+}
+.flex1 h1{
+    text-align: center;
+    font-size: 35px;
+}
+.flex1 p{
+    font-family: serif;
+    font-weight:300;
+    text-align: justify;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.flex2{
+    display: flex;
+    color: white;
+    padding: 10px 30px;
+    position:relative;
+    background: linear-gradient(to right,purple,blue);
+}
+.flex2 h1{
+   color:white;
+   text-align: center;
+   padding-top: 5px;
+}
+.flex2 .flex-child{
+    padding: 0 20px;
+}
+.flex2 .flex-child p{
+    font-family: serif;
+    font-weight:300;
+    text-align: justify;
+    font-size: 20px;
+}
+.timeline{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+
+}
+.timeline ul{
+    list-style-type: none;
+}
+.timeline ul li{
+    padding: 10px;
+    background-color: #1e1f22;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.timeline ul li:last-child{
+    margin-bottom: 0;
+}
+.timeline-content h1{
+    font-size:25px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.timeline-content p{
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+}
+.timeline-content .date{
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+@media only screen and (min-width: 768px){
+    .timeline::before{
+        content: '';
+        position: absolute;
+        height: 1425px;
+        width: 3px;
+        background-color: gray;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 60px;
+        
+    }
+    .timeline ul li{
+        width: 50%;
+        margin-bottom: 50px;
+        position: relative;
+    }
+    .timeline ul li:nth-child(odd){
+        float:left;
+        clear: right;
+        transform: translateX(-30px);
+        border-radius: 20px 0 20px 20px;
+    }
+    .timeline ul li:nth-child(even){
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0 20px 20px 20px;
+    }
+    .timeline ul li::after{
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: gray;
+        border-radius: 50%;
+        top: 0;
+    }
+    .timeline ul li:nth-child(odd)::after{
+        right: -30px;
+        transform: translate(50%,-50%);
+    }
+    .timeline ul li:nth-child(even)::after{
+        left: -30px;
+        transform: translate(-50%,-50%);
+    }
+    .timeline ul li:hover:after{
+        background-color: aqua;
+    }
+    .timeline-content .date{
+        position: absolute;
+        top: -30px;
+    }
+}
